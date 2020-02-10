@@ -1,0 +1,12 @@
+name 				= $STR_NIC_MK6_MOD_NAME;
+picture 			= "logo.paa";
+description 		= "Rearm MK6 Mortar";
+logo 				= "logo.paa";
+logoOver 			= "logo.paa";
+tooltip				= $STR_NIC_MK6_MOD_NAME;
+tooltipOwned		= "Rearm MK6 Mortar Owned";
+overview			= $STR_NIC_MK6_MOD_OVERVIEW;
+author 				= "NIC";
+overviewPicture		= "logo.paa";
+overviewText 		= "Rearm MK6 Mortar";
+overviewFootnote 	= "";

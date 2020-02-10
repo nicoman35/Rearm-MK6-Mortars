@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="NIC_Rearm_MK6">
+    <Package name="NIC_MK6">
+		<Key ID="STR_NIC_MK6_MOD_NAME">
+            <Original>Rearm  Mortar v1.0</Original>
+            <German>Mörser MK6 Wiederbewaffnen v1.0</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_MOD_OVERVIEW">
+            <Original>Rearm  Mortar v1.0 &lt;br /&gt;Rearm Mortars, if ammo sources are to be found within a given radius around the mortar.</Original>
+            <German>Mörser MK6 Wiederbewaffnen v1.0 &lt;br /&gt;Mörser Wiederbewaffnen, falls sich Munitionsquellen in einem vorgegebenen Radius um den Mörser befinden.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_TITLE">
+            <Original>Rearm Mortar</Original>
+            <German>Mörser Wiederbewaffnen</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_NO_AMMO_NEEDED">
+            <Original>Mortar fully armed, no ammo needed.</Original>
+            <German>Mörser voll bestückt, keine Munition notwendig.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_NO_AMMO_CRATES">
+            <Original>No ammo sources found nearby.</Original>
+            <German>Keine Munitionsquellen in der Nähe gefunden.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_REARMING">
+            <Original>Rearming...</Original>
+            <German>Bewaffne neu...</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_MORTAR_REARMED">
+            <Original>Mortar rearmed.</Original>
+            <German>Mörser wiederbewaffnet.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_MORTAR_PAR_REARMED">
+            <Original>Mortar partially rearmed.</Original>
+            <German>Mörser teilweise neu bewaffnet.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_NO_SUITABLE_AMMO">
+            <Original>Found no ammo in %1.</Original>
+            <German>Keine Munition in %1 gefunden.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_CRATE">
+            <Original>crate</Original>
+            <German>der Kiste</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_CRATES">
+            <Original>crates</Original>
+            <German>den Kisten</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_REARM_STATIC">
+            <Original>Rearm Static Mortars</Original>
+            <German>Satische Mörser Wiederbewaffnen</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_REARM_STATIC_TIP">
+            <Original>Turn menu action On/Off for mortar operators allowing rearming, if ammo is to be found within search range.</Original>
+            <German>Ein- und ausschalten des Aktionsmenüeintrages für Mörseroperatoren zur Wiederbefaffnung, falls sich Munitionsquellen innerhalb der Suchreichweite befinden.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_SEARCH_RANGE">
+            <Original>Search Range</Original>
+            <German>Suchreichweite</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_SEARCH_RANGE_TIP">
+            <Original>Search range around mortar in meter, whithin which ammo sources are searched for. HINT: The further away an ammo source is, the longer rearming will take.</Original>
+            <German>Suchreichweite in Meter um statische Mörser, innerhalb dessen nach Munition gesucht wird. HINWEIS: Je weiter entfernt die Munitiosquelle, desto länger das Wiederbewaffnen.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_TIME_PER">
+            <Original>Time Per Round And Meter</Original>
+            <German>Zeit Pro Geschoß Und Meter</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_TIME_PER_TIP">
+            <Original>Time in seconds needed for rearming one round and per meter distance of ammo source and mortar.</Original>
+            <German>Zeit in Sekunden pro Wiederbewaffnung eines Geschoßes und pro Meter Entfernung der Munitionsquelle zum Mörser.</German>
+        </Key>
+		<Key ID="STR_NIC_MK6_REARMING_ABORT">
+            <Original>Rearming aborted</Original>
+            <German>Wiederbewaffnung abgebrochen</German>
+        </Key>
+	</Package>
+</Project>
