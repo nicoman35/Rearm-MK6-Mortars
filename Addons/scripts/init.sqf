@@ -13,8 +13,7 @@ NIC_fn_ACTION_REARM_ON = {
 	];
 	_mortarMK6 setVariable ["NIC_actionID_rearm_MK6", _actionID_MK, false];
 	// diag_log formatText ["%1%2%3%4%5", time, "s  (NIC_fn_Rearm_MK6_ON) _this: ", _this, ", _mortarMK6: ", _mortarMK6];
-};
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+}; 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 NIC_fn_ACTION_REARM_OFF = {								// Remove gunner action 
 	params ["_mortarMK6"];
@@ -23,8 +22,7 @@ NIC_fn_ACTION_REARM_OFF = {								// Remove gunner action
 	_mortarMK6 removeAction _actionID_MK;
 	_mortarMK6 setVariable ["NIC_actionID_rearm_MK6", nil, false];
 	// diag_log formatText ["%1%2%3%4%5", time, "s  (NIC_fn_Rearm_MK6_OFF) _this: ", _this, ", _mortarMK6: ", _mortarMK6];
-};
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+};	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 NIC_fn_Rearm_MK6 = {
 	params ["_mortarMK6"];
@@ -217,8 +215,7 @@ NIC_fn_Rearm_MK6 = {
 		if (gunner _mortarMK6 == player) then {hint format[localize "STR_NIC_MK6_MORTAR_PAR_REARMED"]} 
 		else {_mortarMK6 groupChat format[localize "STR_NIC_MK6_MORTAR_PAR_REARMED"]};
 	};
-};
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+};	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 NIC_fn_Rearmed_MK6_message = {					// rearm mortar message
 	params ["_mortarMK6", "_TotalRearmTime"];
@@ -233,8 +230,7 @@ NIC_fn_Rearmed_MK6_message = {					// rearm mortar message
 		_mortarMK6 groupChat format[localize "STR_NIC_MK6_REARMING"];
 		sleep _TotalRearmTime;
 	};
-};
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+};	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	
 if (isNil{NIC_MK6_REARM_ALLOWED}) then {NIC_MK6_REARM_ALLOWED = true};									// on/off switch for rearm mortars
 if (isNil{NIC_MK6_REARM_SEARCH_RANGE}) then {NIC_MK6_REARM_SEARCH_RANGE = 5};							// search range for ammo crates in meters around mortar
@@ -250,7 +246,9 @@ NIC_MK6_REARM_SOURCES = [																				// sources of infinite ammo resuppl
 	"O_T_Truck_03_ammo_ghex_F",
 	"O_T_Truck_02_Ammo_F",
 	"I_Truck_02_ammo_F",
-	"I_E_Truck_02_Ammo_F"
+	"I_E_Truck_02_Ammo_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_T_APC_Tracked_01_CRV_F"
 ];
 
 NIC_MK6_ACE_CRATES = [																					// sources of ammo for mortars; 
