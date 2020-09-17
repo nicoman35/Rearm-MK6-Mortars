@@ -219,7 +219,6 @@ NIC_fn_Rearm_MK6 = {
 
 NIC_fn_Rearmed_MK6_message = {					// rearm mortar message
 	params ["_mortarMK6", "_TotalRearmTime"];
-	// _TotalRearmTime = _TotalRearmTime + 1;
 	if (gunner _mortarMK6 == player) then {
 		private _str = format[localize "STR_NIC_MK6_REARMING"];
 		for "_i" from _TotalRearmTime to 0 step -1 do {
@@ -228,7 +227,10 @@ NIC_fn_Rearmed_MK6_message = {					// rearm mortar message
 		};
 	} else {
 		_mortarMK6 groupChat format[localize "STR_NIC_MK6_REARMING"];
-		sleep _TotalRearmTime;
+		_mortarMK6 disableAI "RADIOPROTOCOL";									// stop AI gunner from telling 'ready' right after execution of rearm command
+		sleep _TotalRearmTime;													// simulate reload time
+		_mortarMK6 enableAI "RADIOPROTOCOL";									// enable AI gunner's voice after 'rearming'
+		_mortarMK6 groupRadio "SentSupportReady";								// group radio 'ready' confirmation after rearming
 	};
 };	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	

@@ -2,12 +2,12 @@
 <Project name="NIC_Rearm_MK6">
     <Package name="NIC_MK6">
 		<Key ID="STR_NIC_MK6_MOD_NAME">
-            <Original>Rearm  Mortar v1.0</Original>
-            <German>Mörser MK6 Wiederbewaffnen v1.0</German>
+            <Original>Rearm  Mortar v1.1</Original>
+            <German>Mörser MK6 Wiederbewaffnen v1.1</German>
         </Key>
 		<Key ID="STR_NIC_MK6_MOD_OVERVIEW">
-            <Original>Rearm  Mortar v1.0 &lt;br /&gt;Rearm Mortars, if ammo sources are to be found within a given radius around the mortar.</Original>
-            <German>Mörser MK6 Wiederbewaffnen v1.0 &lt;br /&gt;Mörser Wiederbewaffnen, falls sich Munitionsquellen in einem vorgegebenen Radius um den Mörser befinden.</German>
+            <Original>Rearm  Mortar v1.1 &lt;br /&gt;Rearm Mortars, if ammo sources are to be found within a given radius around the mortar.</Original>
+            <German>Mörser MK6 Wiederbewaffnen v1.1 &lt;br /&gt;Mörser Wiederbewaffnen, falls sich Munitionsquellen in einem vorgegebenen Radius um den Mörser befinden.</German>
         </Key>
 		<Key ID="STR_NIC_MK6_TITLE">
             <Original>Rearm Mortar</Original>

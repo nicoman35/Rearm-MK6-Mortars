@@ -5,6 +5,10 @@
 	format[localize "STR_NIC_MK6_TITLE"], 															// pretty name of the category where the setting can be found. Can be stringtable entry.
 	true,																							// data for this setting: [min, max, default, number of shown trailing decimals]
     true																							// "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
+	// {
+		// if (NIC_MK6_REARM_ALLOWED) exitWith {_this call NIC_fn_ACTION_REARM_ON};
+		// _this call NIC_fn_ACTION_REARM_OFF;
+	// }																							// code executed on setting change
 ] call CBA_fnc_addSetting;
 
 [
