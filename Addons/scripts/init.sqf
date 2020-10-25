@@ -184,6 +184,7 @@ NIC_fn_Rearm_MK6 = {
 	// diag_log formatText ["%1%2%3%4%5%6%7", time, "s  (NIC_fn_Rearm_MK6) _TotalRearmTime: ", _TotalRearmTime];
 
 	[_mortarMK6, _TotalRearmTime] call NIC_fn_Rearmed_MK6_message;
+	if (!alive _mortarMK6 || !alive (gunner _mortarMK6)) exitWith {};
 
 	{
 		private _rearmMagazineType = "8Rnd_82mm_Mo_shells";																				// define reload magazine type
