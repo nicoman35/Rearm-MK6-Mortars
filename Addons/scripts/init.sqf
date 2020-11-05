@@ -38,28 +38,36 @@ NIC_fn_Rearm_MK6 = {
 			_weapArray pushBack [getArray (_cfgTurret >> "magazines")]
 		} forEach (getArray (_cfgTurret >> "weapons"));	
     } forEach ([_mortarMK6] call BIS_fnc_getTurrets);
+
 	_weapArray = _weapArray select 1 select 0;
-	private _defaultHEmags = {_x == "8Rnd_82mm_Mo_shells"} count _weapArray;
-	private _defaultIllumMags = {_x == "8Rnd_82mm_Mo_Flare_white"} count _weapArray;
-	private _defaultSmokeMags = {_x == "8Rnd_82mm_Mo_Smoke_white"} count _weapArray;
-	private _defaultHEammo		= _defaultHEmags * 8;																					// default HE ammo count of MK 6 (8 rounds per magazine)
-	private _defaultIllumAmmo 	= _defaultIllumMags * 8;																				// default Flare ammo count of MK 6 (8 rounds per magazine)
-	private _defaultSmokeAmmo 	= _defaultSmokeMags * 8;																				// default Smoke ammo count of MK 6 (8 rounds per magazine)
+	private _defaultHEmags = {_x == "8Rnd_82mm_Mo_shells"} count _weapArray;															// default number of HE magazines
+	private _defaultIllumMags = {_x == "8Rnd_82mm_Mo_Flare_white"} count _weapArray;													// default number of flare magazines
+	private _defaultSmokeMags = {_x == "8Rnd_82mm_Mo_Smoke_white"} count _weapArray;													// default number of smoke magazines
+	private _defaultHEmagazineRounds		= getNumber (configFile >> "CfgMagazines" >> "8Rnd_82mm_Mo_shells" >> "count");				// default number of HE rounds per magazine
+	private _defaultIllumMagazineRounds 	= getNumber (configFile >> "CfgMagazines" >> "8Rnd_82mm_Mo_Flare_white" >> "count");		// default number of flare rounds per magazine
+	private _defaultSmokeMagazineRounds 	= getNumber (configFile >> "CfgMagazines" >> "8Rnd_82mm_Mo_Smoke_white" >> "count");		// default number of smoke rounds per magazine
+	// diag_log formatText ["%1%2%3%4%5", time, "s  (NIC_fn_Rearm_MK6) _defaultHEammo2: " , _defaultHEammo2, ", _defaultIllumAmmo2: " , _defaultIllumAmmo2, ", _defaultSmokeAmmo2: " , _defaultSmokeAmmo2];
+	private _defaultHEammo		= _defaultHEmags * _defaultHEmagazineRounds;															// default total number of HE rounds
+	private _defaultIllumAmmo 	= _defaultIllumMags * _defaultIllumMagazineRounds;														// default total number of flare rounds
+	private _defaultSmokeAmmo 	= _defaultSmokeMags * _defaultSmokeMagazineRounds;														// default total number of smoke rounds
+	// private _defaultHEammo		= _defaultHEmags * 8;																					// default HE ammo count of MK 6 (8 rounds per magazine)
+	// private _defaultIllumAmmo 	= _defaultIllumMags * 8;																				// default flare ammo count of MK 6 (8 rounds per magazine)
+	// private _defaultSmokeAmmo 	= _defaultSmokeMags * 8;																				// default smoke ammo count of MK 6 (8 rounds per magazine)
 	// diag_log formatText ["%1%2%3%4%5%6%7", time, "s  (NIC_fn_Rearm_MK6) _defaultHEammo: ", _defaultHEammo, ", _defaultIllumAmmo: ", _defaultIllumAmmo, ", _defaultSmokeAmmo: ", _defaultSmokeAmmo];
-	private _mortarHEammoCount = 0;
-	private _mortarIllumAmmoCount = 0;
-	private _mortarSmokeAmmoCount = 0;
+	private _mortarHEammoCount = 0;																										// current number of HE rounds
+	private _mortarIllumAmmoCount = 0;																									// current number of flare rounds
+	private _mortarSmokeAmmoCount = 0;																									// current number of smoke rounds
 	private _allMagazines = magazinesAmmoFull _mortarMK6;																				// get current magazines detailed info of mortar
 	// diag_log formatText ["%1%2%3%4%5%6%7", time, "s  (NIC_fn_Rearm_MK6) _allMagazines: ", _allMagazines];
 	{
 		if (_x select 0 == "8Rnd_82mm_Mo_shells") then {																				// current magazine is a HE magazine type
-			_mortarHEammoCount = _mortarHEammoCount + (_x select 1);																	// add current HE magazine count to mortar HE ammo count
+			_mortarHEammoCount = _mortarHEammoCount + (_x select 1);																	// add number of rounds of HE magazine to total HE round number
 		};
-		if (_x select 0 == "8Rnd_82mm_Mo_Flare_white") then {																			// current magazine is a HE magazine type
-			_mortarIllumAmmoCount = _mortarIllumAmmoCount + (_x select 1);																// add current flare magazine count to mortar flare ammo count
+		if (_x select 0 == "8Rnd_82mm_Mo_Flare_white") then {																			// current magazine is a flare magazine type
+			_mortarIllumAmmoCount = _mortarIllumAmmoCount + (_x select 1);																// add number of rounds of flare magazine to total flare round number
 		};
-		if (_x select 0 == "8Rnd_82mm_Mo_Smoke_white") then {																			// current magazine is a HE magazine type
-			_mortarSmokeAmmoCount = _mortarSmokeAmmoCount + (_x select 1);																// add current smoke magazine count to mortar smoke ammo count
+		if (_x select 0 == "8Rnd_82mm_Mo_Smoke_white") then {																			// current magazine is a smoke magazine type
+			_mortarSmokeAmmoCount = _mortarSmokeAmmoCount + (_x select 1);																// add number of rounds of smoke magazine to total smoke round number
 		};
 	} forEach _allMagazines;
 	// diag_log formatText ["%1%2%3%4%5%6%7", time, "s  (NIC_fn_Rearm_MK6) mortar HE ammo: ", _mortarHEammoCount, ", Illum ammo: ", _mortarIllumAmmoCount, ", Smoke ammo: ", _mortarSmokeAmmoCount];
