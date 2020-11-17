@@ -50,9 +50,6 @@ NIC_fn_Rearm_MK6 = {
 	private _defaultHEammo		= _defaultHEmags * _defaultHEmagazineRounds;															// default total number of HE rounds
 	private _defaultIllumAmmo 	= _defaultIllumMags * _defaultIllumMagazineRounds;														// default total number of flare rounds
 	private _defaultSmokeAmmo 	= _defaultSmokeMags * _defaultSmokeMagazineRounds;														// default total number of smoke rounds
-	// private _defaultHEammo		= _defaultHEmags * 8;																					// default HE ammo count of MK 6 (8 rounds per magazine)
-	// private _defaultIllumAmmo 	= _defaultIllumMags * 8;																				// default flare ammo count of MK 6 (8 rounds per magazine)
-	// private _defaultSmokeAmmo 	= _defaultSmokeMags * 8;																				// default smoke ammo count of MK 6 (8 rounds per magazine)
 	// diag_log formatText ["%1%2%3%4%5%6%7", time, "s  (NIC_fn_Rearm_MK6) _defaultHEammo: ", _defaultHEammo, ", _defaultIllumAmmo: ", _defaultIllumAmmo, ", _defaultSmokeAmmo: ", _defaultSmokeAmmo];
 	private _mortarHEammoCount = 0;																										// current number of HE rounds
 	private _mortarIllumAmmoCount = 0;																									// current number of flare rounds
